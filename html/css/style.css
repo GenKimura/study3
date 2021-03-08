@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    display: flex;
+}
+
+.main {
+    width: 560px;
+    margin: 20px auto;
+}
+
+h1, p {
+    margin: 20px 0px 0px 0px;
+}
+
+.row {
+    display: flex;
+}
+
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    margin: 0px;
+}
+
+button {
+    display: block;
+    position: relative;
+    width: 100px;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #1B1B1B;
+    background: #fff;
+    border:1px solid #1B1B1B;
+}
+
+button:hover {
+    background: #1B1B1B;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
