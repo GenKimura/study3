@@ -1,4 +1,4 @@
-import eel
+pipimport eel
 
 app_web = "html"
 end_point = "index.html"
