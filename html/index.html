@@ -9,17 +9,16 @@
 <body>
     <div class="main">
         <h1>キャラクター検索</h1>
-        <form action="#">
-            <div class="row">
-                <div class="left">
-                    <p>検索するキャラクター名を入力してください</p>
-                    <input id= "name" type="text" required>
-                </div>
-                <div class="right">
-                    <button type="submit" id="search">検索</button>
-                </div>
+        <div class="row">
+            <div class="left">
+                <p>検索するキャラクター名を入力してください</p>
+                <input id= "name" type="text">
             </div>
-        </form>
+            <div class="right">
+                <button type="button" id = 'search'>検索</button>
+                <button type="button" id = 'clear'>クリア</button>
+            </div>
+        </div>
         <div>
             <p>検索結果</p>
             <textarea rows="10" id="result"></textarea>
