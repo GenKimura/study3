@@ -9,9 +9,20 @@
 <body>
     <div class="main">
         <h1>キャラクター検索</h1>
+        
         <div class="row">
             <div class="left">
-                <p>検索するキャラクター名を入力してください</p>
+                <p>【Step1】検索ファイルを選択してください</p>
+                <p>検索ファイル名：</p>
+            </div>
+            <div class="right">
+                <button type="button" id = 'select'>選択</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="left">
+                <p>【Step2】キャラクター名を入力してください</p>
                 <input id= "name" type="text">
             </div>
             <div class="right">
@@ -19,6 +30,7 @@
                 <button type="button" id = 'clear'>クリア</button>
             </div>
         </div>
+
         <div>
             <p>検索結果</p>
             <textarea rows="10" id="result"></textarea>

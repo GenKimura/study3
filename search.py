@@ -1,8 +1,12 @@
 import pandas as pd
+import os
 
-def kimetsuSearch(name):
+def kimetsuSearch(name, path):
 
-    df = pd.read_csv('kimetsu.csv')
+    filePath = path
+    fileName = os.path.basename(path)
+
+    df = pd.read_csv(fileNAme)
     source = list(df['キャラクターネーム'])
 
     search = name
@@ -12,7 +16,7 @@ def kimetsuSearch(name):
     else:
         source.append(search)
         df = pd.DataFrame({'キャラクターネーム': source})
-        df.to_csv('kimetsu.csv', index=False)
+        df.to_csv(path, index=False)
         return (f'「{search}」はキャラクターリストに無かったので、追加しました')
 
 
