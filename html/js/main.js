@@ -1,3 +1,7 @@
+// グローバル変数
+let path = [];
+
+
 // 検索する名前を取得
 function getValue () {
     return document.getElementById("name").value
@@ -5,9 +9,9 @@ function getValue () {
 
 // open()を読み込み （非同期処理）
 async function open() {
-    const path = await eel.open()()
-    console.log(path)
-    document.getElementById("fileName").append(path);
+    path = await eel.open()()
+    // console.log(path)
+    document.getElementById("fileName").append(path[1]);
     return path
 }
 
@@ -21,8 +25,10 @@ async function kimetsuSearch(name, path) {
 
 // 「選択」ボタンを押してファイルパスを取得
 document.getElementById("select").onclick = () => {
-    const path = open()
+    // sconst path = open()
+    path = open()
     console.log(path)
+    return path
 }
 
 // 「検索」ボタンで名前記入されていればkimetsuSearchを実行

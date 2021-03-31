@@ -1,3 +1,5 @@
+import os
+
 import eel
 
 import search
@@ -10,7 +12,8 @@ size = (600, 500)
 @eel.expose
 def open():
     path = openFile.openDialog()
-    return path
+    base = os.path.basename(path)
+    return [path, base]
 
 @eel.expose
 def kimetsuSearch(name, path):
