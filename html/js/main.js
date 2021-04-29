@@ -10,7 +10,6 @@ function getValue () {
 // open()を読み込み （非同期処理）
 async function open() {
     path = await eel.open()()
-    // console.log(path)
     document.getElementById("fileName").append(path[1]);
     return path
 }
@@ -25,7 +24,6 @@ async function kimetsuSearch(name, path) {
 
 // 「選択」ボタンを押してファイルパスを取得
 document.getElementById("select").onclick = () => {
-    // sconst path = open()
     path = open()
     console.log(path)
     return path
@@ -36,12 +34,18 @@ document.getElementById("search").onclick = () => {
         
         const searchItem = getValue()
         
-        if (searchItem == '') {
-            alert('検索する名前を入力してください\n');
+        if (path == ''){
+            alert('検索するファイルを選択してください\n');
         }　else {
-            document.getElementById("result").append(searchItem + "を検索します\n");
-            kimetsuSearch(searchItem, path);
+            if (searchItem == '') {
+                alert('検索する名前を入力してください\n');
+            }　else {
+                document.getElementById("result").append(searchItem + "を検索します\n");
+                console.log(path[0])
+                kimetsuSearch(searchItem, path[0]);
+            }
         }
+
     }
 
 // 「クリア」ボタンを押すとリロード
