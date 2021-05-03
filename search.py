@@ -4,9 +4,9 @@ import os
 def kimetsuSearch(name, path):
 
     filePath = path
-    fileName = os.path.basename(path)
+    # fileName = os.path.basename(path)
 
-    df = pd.read_csv(fileName)
+    df = pd.read_csv(path)
     source = list(df['キャラクターネーム'])
 
     search = name
